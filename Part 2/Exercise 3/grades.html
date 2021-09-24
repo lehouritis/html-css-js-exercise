@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+
+    <title>Exercise 3</title>
+</head>
+
+<body>
+
+    <!-- MODAL -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Name</h5>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <th>Class</th>
+                            <th>Grade</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Calculus</td>
+                                <td><input type="number" name="calculus" id="calculus" max="10" min="1"></td>
+                            </tr>
+                            <tr>
+                                <td>Literature</td>
+                                <td><input type="number" name="literature" id="literature" min="1" max="10"></td>
+                            </tr>
+                            <tr>
+                                <td>Physics</td>
+                                <td><input type="number" name="physics" id="physics" min="1" max="10"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" data-dismiss="modal" onclick="getAvgGrade()">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Athens School</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="./index.html">Students List
+                        <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link active" href="#">Students Grades</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- TABLE -->
+        <table id="tables" class="table table-hover w-75">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Average Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr td data-toggle="modal" data-target="#exampleModal" onclick="john()">
+                    <td>John Doe</td>
+                    <td class="avg" >0</td> 
+                </tr>
+                <tr data-toggle="modal" data-target="#exampleModal" onclick="mary()">
+                    <td>Mary Moe</td>
+                    <td class="avg" >0</td> 
+                </tr>
+                <tr data-toggle="modal" data-target="#exampleModal" onclick="july()">
+                    <td>July Dooley</td>
+                    <td class="avg" >0</td>  
+            </tbody>
+        </table>
+
+
+    </div>
+
+    <script src="./main.js"></script>
+
+</body>
+
+</html>
